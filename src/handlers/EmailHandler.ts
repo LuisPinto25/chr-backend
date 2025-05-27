@@ -11,7 +11,7 @@ export class EmailHandler extends UserHandler {
     }
 
     if (FakeDatabase.findUserByEmail(user.email)) {
-      throw new Error('email ya registrado');
+      throw new Error('Email ya registrado');
     }
 
     await super.handle(user);
